@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌈Kawaii Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="date">
+            <h4>
+              <strong><span class="time" id="datetime"></span></strong>
+            </h4>
+            <small>
+              <button class="button">
+                Update
+              </button>
+            </small>
+          </div>
+          <div>
+            <img class="sun" src="images/sun.png" alt="sun" />
+          </div>
+          <p class="largeDisplay">Los Angles 83℉</p>
+        </div>
+        <div class="col">
+          <form
+            id="form_search"
+            name="form_search"
+            method="get"
+            action=""
+            class="form-inline"
+          >
+            <div class="form-group">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  placeholder="Search for..."
+                  type="text"
+                />
+                <span class="input-group-btn">
+                  <button class="btn" type="button">Search</button>
+                </span>
+              </div>
+            </div>
+          </form>
+          <div class="art">
+            <img src="images/art.png" alt="Artismist from salior moon" />
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <div class="lastrow">
+        <div class="row">
+          <div class="col">
+            <div>
+              <p class="days">Tomorrow</p>
+              <div>
+                <img class="weather" src="images/sun.png" alt="sunny" />
+              </div>
+              <div class="temp">
+                <p>65℉ | 75℉</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="days">Wednesday</p>
+              <div>
+                <img class="weather" src="images/cloudy.png" alt="sunny" />
+              </div>
+              <div class="temp">
+                <p>65℉ | 75℉</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="days">Thursday</p>
+              <div>
+                <img class="weather" src="images/thunder.png" alt="sunny" />
+              </div>
+              <div class="temp">
+                <p>65℉ | 75℉</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="days">Friday</p>
+              <div>
+                <img class="weather" src="images/thunder.png" alt="sunny" />
+              </div>
+              <div class="temp">
+                <p>65℉ | 75℉</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="days">Saturday</p>
+              <div>
+                <img class="weather" src="images/cloudy.png" alt="sunny" />
+              </div>
+              <div class="temp">
+                <p>65℉ | 75℉</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="days">Sunday</p>
+              <div>
+                <img class="weather" src="images/sun.png" alt="sunny" />
+              </div>
+              <div class="temp">
+                <p>65℉ | 75℉</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var dt = new Date();
+      document.getElementById("datetime").innerHTML =
+        ("0" + dt.getDate()).slice(-2) +
+        "/" +
+        ("0" + (dt.getMonth() + 1)).slice(-2) +
+        "/" +
+        dt.getFullYear() +
+        " " +
+        "<br/>" +
+        ("0" + dt.getHours()).slice(-2) +
+        ":" +
+        ("0" + dt.getMinutes()).slice(-2);
+    </script>
+  </body>
+</html>
