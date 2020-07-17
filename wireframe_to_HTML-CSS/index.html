@@ -13,6 +13,10 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Galada&family=Modak&family=Rowdies&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -31,35 +35,32 @@
           <div>
             <img class="sun" src="images/sun.png" alt="sun" />
           </div>
-          <p class="largeDisplay">Los Angles 83℉</p>
-        </div>
-        <div class="col">
-          <form
-            id="form_search"
-            name="form_search"
-            method="get"
-            action=""
-            class="form-inline"
-          >
-            <div class="form-group">
-              <div class="input-group">
-                <input
-                  class="form-control"
-                  placeholder="Search for..."
-                  type="text"
-                />
-                <span class="input-group-btn">
-                  <button class="btn" type="button">Search</button>
-                </span>
-              </div>
-            </div>
-          </form>
-          <div class="art">
-            <img src="images/art.png" alt="Artismist from salior moon" />
+
+          <div class="largeDisp">
+            <p class="largeDisplay">Los Angeles 83℉</p>
           </div>
-          <div></div>
+        </div>
+        <div class="col" class="rightCol">
+          <form
+            class="searchBar"
+            action="https://www.google.com/search?"
+            target="_blank"
+            method="GET"
+          >
+            <input type="text" name="q" placeholder="Ask Maria🐱‍💻" />
+            <input type="hidden" name="q" value=" " />
+            <button class="searchbtn">Search</button>
+          </form>
+          <div class="rigashtCol">
+            <img
+              class="art"
+              src="images/art.png"
+              alt="Artismist from salior moon"
+            />
+          </div>
         </div>
       </div>
+
       <div class="lastrow">
         <div class="row">
           <div class="col">
@@ -129,6 +130,9 @@
             </div>
           </div>
         </div>
+        <p>
+          Created by Maria Martinez
+        </p>
       </div>
     </div>
     <script>

@@ -2,16 +2,24 @@ body {
   padding-top: 50px;
   display: block;
   margin: 0 auto;
+  font-family: "Galada", cursive;
 }
 col {
   margin-bottom: 200px;
 }
+p {
+  position: center;
+}
 .container {
-  background-image: url("images/uni.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 50px;
+  background-image: linear-gradient(
+    -225deg,
+    #69eacb 0%,
+    #eaccf8 48%,
+    #6654f1 100%
+  );
+  padding: 20px;
   margin: 50px;
+  width: fit-content;
   display: block;
   border: 0.5px solid blueviolet;
   font-family: "Galada", cursive;
@@ -20,7 +28,7 @@ col {
   color: purple;
   background-color: transparent;
   margin-left: 50px;
-  font-family: "Galada", cursive;
+  list-style-position: inside;
 }
 .time {
   font: 56px;
@@ -34,25 +42,28 @@ col {
   width: 80px;
   height: 25px;
   border: 0.5px solid blueviolet;
-  font-family: "Galada", cursive;
 }
 
 .largeDisplay {
   color: purple;
-  font-size: 50px;
+  font-size: 40px;
   padding-left: 40px;
   margin: 0 auto;
-  font-family: "Galada", cursive;
+  margin-top: 30%;
+  width: 100%;
 }
+
 .searchBar {
   width: 400px;
   display: block;
   margin: 0 auto;
   color: purple;
   background-color: transparent;
-  font-family: "Galada", cursive;
+
+  float: right;
 }
-.input-group-btn {
+.searchbtn {
+  color: white;
   background-color: #d19bfd;
   border-radius: 15px;
   text-align: center;
@@ -60,14 +71,13 @@ col {
   height: 40px;
   margin-left: 5px;
   border: 0.5px solid blueviolet;
-  font-family: "Galada", cursive;
 }
 .form-control {
   margin-left: 150px;
 }
 .sun {
-  margin-left: 350px;
-
+  list-style-position: inside;
+  float: right;
   width: 200px;
 }
 .lastrow {
@@ -78,9 +88,17 @@ col {
 .temp {
   color: purple;
   margin-left: 40px;
-  font-family: "Galada", cursive;
 }
 .weather {
   width: 60px;
   margin-left: 40px;
+}
+.art {
+  list-style-position: inside;
+  width: 70%;
+  float: center right;
+}
+.rightCol {
+  list-style-position: inside;
+  width: 50%;
 }
