@@ -3,8 +3,7 @@ body {
   display: block;
   margin: 0 auto;
   font-family: "Galada", cursive;
-}
-col {
+  background-image: url("images/output-onlinepngtools\ \(5\).png");
   margin-bottom: 200px;
 }
 p {
@@ -17,11 +16,12 @@ p {
     #eaccf8 48%,
     #6654f1 100%
   );
+  border-radius: 30px;
   padding: 20px;
   margin: 50px;
-  width: fit-content;
+
   display: block;
-  border: 0.5px solid blueviolet;
+  border: groove 1em blueviolet;
   font-family: "Galada", cursive;
 }
 .date {
@@ -48,18 +48,29 @@ p {
   color: purple;
   font-size: 40px;
   padding-left: 40px;
-  margin: 0 auto;
-  margin-top: 30%;
+  margin-left: 0%;
+  margin-top: 20%;
+  margin-right: 0%;
   width: 100%;
 }
 
-.searchBar {
-  width: 400px;
+.tempDisplay {
+  width: 60%;
+  display: block;
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 5%;
+  color: purple;
+  background-color: transparent;
+  float: right;
+}
+
+#search-bar {
+  width: 350px;
   display: block;
   margin: 0 auto;
   color: purple;
   background-color: transparent;
-
   float: right;
 }
 .searchbtn {
@@ -74,6 +85,7 @@ p {
 }
 .form-control {
   margin-left: 150px;
+  flex: auto;
 }
 .sun {
   list-style-position: inside;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🌈Kawaii Weather App</title>
     <link rel="stylesheet" href="styles.css" />
-    <script type="text/javascript" src="index.js"></script>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -24,7 +24,7 @@
         <div class="col">
           <div class="date">
             <h4>
-              <strong><span class="time" id="datetime"></span></strong>
+              <strong> <span class="time" id="datetime"> </span></strong>
             </h4>
             <small>
               <button class="button">
@@ -35,21 +35,31 @@
           <div>
             <img class="sun" src="images/sun.png" alt="sun" />
           </div>
-
+          <span class="tempDisplay">
+            <span id="temp" class="tempDisplay">
+              83℉
+              <span>|<a id="tempC" href="">℃</a> </span>
+            </span>
+          </span>
           <div class="largeDisp">
-            <p class="largeDisplay">Los Angeles 83℉</p>
+            <p id="currentCity" class="largeDisplay">
+              Los Angeles
+            </p>
           </div>
         </div>
+
         <div class="col" class="rightCol">
-          <form
-            class="searchBar"
-            action="https://www.google.com/search?"
-            target="_blank"
-            method="GET"
-          >
-            <input type="text" name="q" placeholder="Ask Maria🐱‍💻" />
-            <input type="hidden" name="q" value=" " />
-            <button class="searchbtn">Search</button>
+          <form class="search-bar" id="search-bar">
+            <input
+              id="form"
+              type="search"
+              placeholder="Enter city...🐱‍💻"
+              aria-label="Search"
+              class="submitSearch"
+            />
+            <button class="searchbtn" type="submit" id="searchBtn">
+              Search
+            </button>
           </form>
           <div class="rigashtCol">
             <img
@@ -132,19 +142,6 @@
         </div>
       </div>
     </div>
-    <script>
-      var dt = new Date();
-      document.getElementById("datetime").innerHTML =
-        ("0" + dt.getDate()).slice(-2) +
-        "/" +
-        ("0" + (dt.getMonth() + 1)).slice(-2) +
-        "/" +
-        dt.getFullYear() +
-        " " +
-        "<br/>" +
-        ("0" + dt.getHours()).slice(-2) +
-        ":" +
-        ("0" + dt.getMinutes()).slice(-2);
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

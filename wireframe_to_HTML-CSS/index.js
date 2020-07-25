@@ -1,50 +1,53 @@
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  moscow: {
-    temp: -5,
-    humidity: 20,
-  },
-};
+//get the current date, day and time
+let today = new Date();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+let day = days[today.getDay()];
 
-let city = prompt("Enter a city");
-if (city === null || !city.match(/[a-z]/i)) {
-  city = prompt(
-    "You did not enter a proper city name. Please enter a city name."
-  );
-  if (city === null || !city.match(/[a-z]/i)) {
-    alert("Error! Page will reload for you to try again.");
-    location.reload(true);
+document.querySelector("#datetime").innerHTML =
+  ("0" + (today.getMonth() + 1)).slice(-2) +
+  "/" +
+  ("0" + today.getDate()).slice(-2) +
+  "/" +
+  today.getFullYear() +
+  " " +
+  "<br />" +
+  day +
+  "<br />" +
+  ("0" + today.getHours()).slice(-2) +
+  ":" +
+  ("0" + today.getMinutes()).slice(-2);
+
+function search(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#form");
+  let searchInputToLower = searchInput.value
+    .toLowerCase()
+    .replace(/\b[a-z]/g, function (letter) {
+      return letter.toUpperCase();
+    });
+  if (searchInputToLower) {
+    updateCity.innerHTML = searchInputToLower;
+  } else {
+    updateCity.innerHTML = `Please type a city...`;
   }
-} else {
-  city = city.toLowerCase();
 }
 
-if (weather[city] !== undefined) {
-  let temperature = weather[city].temp;
-  let humidity = weather[city].humidity;
-  let celsiusTemperature = Math.round(temperature);
-  let fahrenheitTemperature = Math.round((temperature * 9) / 5 + 32);
-
-  alert(
-    `It is currently ${celsiusTemperature}°C (${fahrenheitTemperature}°F) in ${city} with a humidity of ${humidity}%`
-  );
-} else {
-  alert(
-    `Sorry we don't know the weather for this city, try to go to https://www.google.com/search?q=weather+${city}`
-  );
+function changeTemp(event) {
+  event.preventDefault();
+  tempC.innerHTML = "28.3 ℃";
 }
+
+let updateCity = document.querySelector("#currentCity");
+let form = document.querySelector("#search-bar");
+form.addEventListener("submit", search);
+
+let tempC = document.querySelector("#temp");
+tempC.addEventListener("click", changeTemp);
