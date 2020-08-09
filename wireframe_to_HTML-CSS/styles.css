@@ -114,3 +114,7 @@ p {
   list-style-position: inside;
   width: 50%;
 }
+#currentLocation {
+  width: fit-content;
+  height: 40px;
+}
